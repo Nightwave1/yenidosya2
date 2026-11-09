@@ -1,0 +1,23 @@
+{
+  "name": "@oleum/db",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "up": "tsx src/run.ts",
+    "seed": "tsx src/seed.ts",
+    "provision": "tsx src/provision.ts"
+  },
+  "dependencies": {
+    "pg": "^8.11.3",
+    "bcryptjs": "^2.4.3",
+    "tsx": "^4.7.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.0",
+    "@types/bcryptjs": "^2.4.6",
+    "typescript": "^5.4.0"
+  }
+}

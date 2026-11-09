@@ -1,0 +1,26 @@
+{
+  "name": "oleumsrandevu",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Multi-tenant Appointment & Subscription Management System for barbershops",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "type-check": "npm run type-check --workspaces --if-present",
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web-booking",
+    "db:migrate": "npm run up -w @oleum/db",
+    "db:seed": "npm run seed -w @oleum/db",
+    "db:provision": "npm run provision -w @oleum/db"
+  },
+  "devDependencies": {
+    "turbo": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
